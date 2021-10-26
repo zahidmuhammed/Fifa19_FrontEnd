@@ -1,9 +1,22 @@
+import React, { useEffect } from "react";
+import store from "store";
 import { Link } from "react-router-dom";
+
+// import Context from "./Context/Context";
 import data from "./data.json";
 import "./Profile.css";
 
+const storeKey = "Player-key";
+
 const Profile = ({ pname }) => {
+  // const { setPname } = useContext(Context);
+  //Storing early data to localstorage
+  useEffect(() => {
+    store.set(storeKey, { data: pname });
+  }, [pname]);
+
   let details = [];
+
   details = data.filter((player) => {
     return player.Name === pname;
   });
