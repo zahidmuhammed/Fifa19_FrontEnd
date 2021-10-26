@@ -9,7 +9,7 @@ const Home = () => {
   const [type, setType] = useState("name");
   const [value, setValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  const { pname, setPname } = useContext(Context);
+  const { setPname } = useContext(Context);
   let history = useHistory();
 
   const handleTypeChange = (e) => {
@@ -18,6 +18,7 @@ const Home = () => {
     setSuggestions([]);
   };
 
+  //Suggestions Recomendation
   const handleInputChange = (e) => {
     const text = e.target.value;
     let matches = [];

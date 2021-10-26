@@ -44,6 +44,7 @@ const Profile = ({ pname }) => {
         </Link>
       </div>
       <div className="main-wrapper">
+        {/* Left Diagram Section*/}
         <div className="left-wrapper">
           Crossing{" "}
           <div
@@ -81,6 +82,7 @@ const Profile = ({ pname }) => {
             {details[0].Volleys + "%"}
           </div>
         </div>
+        {/* Right Diagram Section */}
         <div className="right-wrapper">
           <div className="tags">
             <span className="tag">{details[0].Club}</span>
